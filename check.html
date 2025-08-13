@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Description</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 90%;
+            width: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-description {
+            position: absolute;
+            inset: 0; /* full cover */
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            padding: 15px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container" id="imageBox">
+        <img src="https://via.placeholder.com/350x200" alt="Project" id="mainImage">
+        <div class="image-description" id="imageDesc">
+            This is my awesome project description. It appears when you hover or tap!
+        </div>
+    </div>
+
+    <script>
+        const imageBox = document.getElementById("imageBox");
+        const mainImage = document.getElementById("mainImage");
+        const imageDesc = document.getElementById("imageDesc");
+
+        // Desktop hover
+        imageBox.addEventListener("mouseenter", () => {
+            mainImage.style.opacity = "0";
+            imageDesc.style.opacity = "1";
+        });
+
+        imageBox.addEventListener("mouseleave", () => {
+            mainImage.style.opacity = "1";
+            imageDesc.style.opacity = "0";
+        });
+
+        // Mobile tap toggle
+        imageBox.addEventListener("click", () => {
+            if (mainImage.style.opacity === "0") {
+                mainImage.style.opacity = "1";
+                imageDesc.style.opacity = "0";
+            } else {
+                mainImage.style.opacity = "0";
+                imageDesc.style.opacity = "1";
+            }
+        });
+    </script>
+
+</body>
+</html>

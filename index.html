@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">My Portfolio</a>
+            <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+            <ul class="menu">
+                <li class="list"><a href="#home" aria-current="page">Home</a></li>
+                <li class="list"><a href="#about">About</a></li>
+                <li class="list"><a href="#portfolio">Portfolio</a></li>
+                <li class="list"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="terminal-body" id="terminal">
+
+            </div>
+            <div class="hero-buttons">
+                <a href="#project">View my Project</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <hr>
+        <!--About us-->
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <figure class="image">
+                <img src="profile.png" alt="yaseen's profile picture.">
+            </figure>
+            <div class="about-content">
+                <p>
+                    I am a dedicated and creative web developer with experience in building user-friendly and visually
+                    appealing websites. My expertise includes HTML, CSS, JavaScript, and various modern frameworks. I
+                    enjoy solving problems and continuously learning new technologies to enhance my skills.
+                </p>
+            </div>
+        </section>
+        <hr>
+        <!--Skills-->
+        <h2 style="text-align: center; padding-top: 95px;">Skills</h2>
+        <section class="skills">
+            <article class="skill-card">
+                <div class="icon">
+                    <span> <i class="fa-solid fa-laptop-code" title="Web Development"></i></span>
+                </div>
+                <h3>Web Development</h3>
+                <p>End-to-end web apps: structure, interactions, deployment and performance.</p>
+
+                <div class="tech-list" aria-hidden="false">
+                    <span class="tech">HTML</span>
+                    <span class="tech">CSS</span>
+                    <span class="tech">JavaScript</span>
+                    <span class="tech">Git</span>
+                </div>
+
+            </article>
+
+            <article class="skill-card">
+                <div class="icon">
+                    <span><i class="fa-brands fa-react" title="Front-end"></i></span>
+                </div>
+                <h3>Front-end</h3>
+                <p>Pixel-perfect UI, responsive layouts and interactive components.</p>
+                <div class="tech-list">
+                    <span class="tech">React</span>
+                    <span class="tech">Vue</span>
+                    <span class="tech">jQuery</span>
+                    <span class="tech">CSS</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="icon">
+                    <span><i class="fa-solid fa-server" title="Back-end"></i></span>
+                </div>
+                <h3>Back-end</h3>
+                <p>APIs, databases and server logic that keep apps reliable and fast.</p>
+                <div class="tech-list">
+                    <span class="tech">Node.js</span>
+                    <span class="tech">PHP</span>
+                    <span class="tech">MySQL</span>
+                    <span class="tech">REST</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="icon">
+                    <span><i class="fa-solid fa-palette" title="UI/UX"></i></span>
+                </div>
+                <h3>UI/UX</h3>
+                <p>Design thinking, prototypes and user-tested interfaces for better UX.</p>
+                <div class="tech-list">
+                    <span class="tech">Figma</span>
+                    <span class="tech">Canva</span>
+                    <span class="tech">Photoshop</span>
+                </div>
+            </article>
+        </section>
+        <hr>
+        <!--project-->
+        <h2 style="text-align: center; padding: 90px; padding-bottom: 80px;">Projects</h2>
+        <section class="project" id="project">
+            <article class="project-content">
+                <figure class="img">
+                    <img src="" alt="">
+                </figure>
+                <h3>Project name</h3>
+                <p>description and link</p>
+            </article>
+            <article class="project-content">
+                <figure class="img">
+                    <img src="" alt="">
+                </figure>
+                <h3>Project name</h3>
+                <p>description and link</p>
+            </article>
+            <article class="project-content">
+                <figure class="img">
+                    <img src="" alt="">
+                </figure>
+                <h3>Project name</h3>
+                <p>description and link</p>
+            </article>
+            <article class="project-content">
+                <figure class="img">
+                    <img src="" alt="">
+                </figure>
+                <h3>Project name</h3>
+                <p>description and link</p>
+            </article>
+        </section>
+        <hr>
+        <!--Contact-->
+         <h2 style="text-align: center; padding-top: 90px; padding-bottom: 40px;">Contact</h2>
+        <section class="contact" id="contact">
+            <form class="contact-form" action="#" method="post" autocomplete="off">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+           
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
