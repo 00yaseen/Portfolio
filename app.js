@@ -19,7 +19,7 @@ const lines = [
     "Skills: HTML, CSS, JavaScript, PHP, MySQL",
     "Frameworks: React, Node.js, Express",
     "UI/UX: Figma, Canva, Photoshop",
-    ">>> Loading portfolio..."
+   
 ];
 
 let lineIndex = 0;
@@ -39,5 +39,6 @@ function typeLine() {
         }
     }
 }
+
 
 typeLine();
